@@ -40,6 +40,7 @@ Advanced Haskell:
   * Worksheets? - Yes
   * Prerequisites - None
 - Monoids
+  * STATUS - COMPLETED
   * Speaker - Sam
   * Worksheets? - Yes
   * Prerequisites - None
@@ -64,6 +65,9 @@ Advanced Haskell:
   * Worksheets - sort of
   * Prerequisites - None
 - Category Theory
+  * Speaker - Sam
+  * Worksheets - no
+  * Prerequisites - None
 
 More Advanced Haskell:
 - Effects
@@ -90,6 +94,10 @@ More Advanced Haskell:
   * Speaker - Jess
   * Worksheets? - No
   * Prerequisites - None
+- Curry-Howard
+  * Speaker - Sam
+  * Worksheets - yes from types
+  * Prerequisites - Dependent types
 - Integrated Haskell Project (web framework)
   * Speaker - Jess
   * Worksheets? - No
