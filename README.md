@@ -32,6 +32,7 @@ Advanced Haskell:
   * Worksheets? - Yes
   * Prerequisites - None
 - Domain Specific Languages
+  * STATUS - started (basics covered, can continue onto binders and more modularity)
   * Speaker - Sam
   * Worksheets? - Yes
   * Prerequisites - None
