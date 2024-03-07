@@ -92,10 +92,21 @@ instance Rob RL where
   f = F
   t = Turn
 
-newtype Cmd = Cmd Int
+newtype NumCmds = NumCmds Int
 
--- instance Rob Cmd where
---   ...
+instance Rob NumCmds where
+  s = NumCmds 1
+  f _ (NumCmds n) = NumCmds (n + 1)
+  t _ (NumCmds n) = NumCmds (n + 1)
+
+newtype HowFar = HowFar Int
+  deriving Num -- For convenience
+
+instance Rob HowFar where
+  s = 1 -- We can do this because we derived `Num` for `HowFar`
+  f _ n = n + 1
+  t _ n = n + 1
+
 
 class Rob a => RobDance a where
   d :: a -> a
