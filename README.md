@@ -19,7 +19,7 @@ Some topics follow on better from others, so will have "prerequisites". Some top
 
 Advanced Haskell:
 - More Monads (Reader, Writer, State, MonadFail, MonadState)
-  * STATUS - started (Trees covered)
+  * STATUS - started (Trees and Reader covered)
   * Speaker - Jess
   * Worksheets? - No
   * Prerequisites - None (we will start with a recap of Monads)
@@ -63,10 +63,12 @@ Advanced Haskell:
   * Worksheets? - No
   * Prerequisites - None
 - Arrows
+  * STATUS - mostly covered Category typeclass
   * Speaker - Jess
   * Worksheets - sort of
   * Prerequisites - None
 - Category Theory
+  * STATUS - Jess gave an intro to a small group over the spring break
   * Speaker - Sam
   * Worksheets - no
   * Prerequisites - None
@@ -81,6 +83,7 @@ More Advanced Haskell:
   * Worksheets - sort of
   * Prerequisites - More monads
 - Generalised Algebraic Data Types (GADTs)
+  * STATUS - gave an intro, including length-indexed vectors
   * Speaker - Jess
   * Worksheets? - No
   * Prerequisites - None

@@ -53,6 +53,7 @@ library
     exposed-modules:  Arrows,
                       GADTs,
                       MoreMonads,
+                      MultiParamTypeClassesAmbig,
                       CPU
 
     -- Modules included in this library but not exported.
