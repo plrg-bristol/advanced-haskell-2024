@@ -68,7 +68,7 @@ Advanced Haskell:
   * Worksheets - sort of
   * Prerequisites - None
 - Category Theory
-  * STATUS - Jess gave an intro to a small group over the spring break
+  * STATUS - COMPLETED
   * Speaker - Sam
   * Worksheets - no
   * Prerequisites - None
@@ -114,6 +114,6 @@ More Advanced Haskell:
 
 Most Advanced Haskell
 - Comonads (game of life)
-  * Speaker - Jess
+  * Speaker - Sam
   * Worksheets? - No
   * Prerequisites - More Monads
