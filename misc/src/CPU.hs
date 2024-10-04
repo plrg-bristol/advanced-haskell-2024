@@ -14,8 +14,12 @@ data Instr
   | HALT
   | ADDLit Int
   | ADD MemAddr
+  | JUMP
+  | RELJUMP Int
 
 type Prog = [Instr]
+
+type Instrs = IntMap Instr
 
 ex1 = [HALT]
 
@@ -39,3 +43,27 @@ exec instrs = foldl' f k instrs
     k = (0, IM.empty)
 
     f = execInstr
+
+execInstr' (pc, acc, mem) instr = case instr of
+  STORE addr -> (pc + 1, acc, IM.insert addr acc mem)
+  LOAD addr -> (pc + 1, mem IM.! addr, mem)
+  HALT -> (-1, acc, mem)
+  ADDLit x -> (pc + 1, acc + x, mem)
+  ADD addr -> (pc + 1, acc + mem IM.! addr, mem)
+  JUMP -> (acc, acc, mem)
+  RELJUMP n -> (pc + 1 + n, acc, mem)
+
+
+exec' :: Instrs -> (Int, Int, Memory)
+exec' instrs = go (0, 0, IM.empty)
+  where
+    go state@(pc, _acc, _mem) = case instrs IM.!? pc of
+      Nothing -> error "out of bounds" state
+      Just HALT -> state
+      Just instr -> go (execInstr' state instr)
+
+toInstrs :: [a] -> IntMap a
+toInstrs = IM.fromList . zip [0..]
+
+ex5 = [ADDLit 3, STORE 1, JUMP, HALT, ADDLit 10, HALT]
+ex6= [ADDLit 3, STORE 1, RELJUMP 1, HALT, ADDLit 10, HALT]

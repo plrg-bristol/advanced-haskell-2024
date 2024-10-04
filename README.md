@@ -54,7 +54,7 @@ Advanced Haskell:
   * Worksheets? - No
   * Prerequisites - None
 - Let's make a CPU Simulator
-  * STATUS - 1 session (implemented basic load, store, add instructions). Potential session 2: program counter + jump instructions?
+  * STATUS - 2 session (implemented basic load, store, add instructions, jump with acc, relative jump).
   * Speaker - Jess
   * Worksheets? - Yes
   * Prerequisites - None
