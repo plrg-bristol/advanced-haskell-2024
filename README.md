@@ -96,10 +96,12 @@ More Advanced Haskell:
   * Worksheets? - No
   * Prerequisites - More Monads
 - "Dependent types"
+  * status = sort of covered en passant in Curry-Howard
   * Speaker - Jess
   * Worksheets? - No
   * Prerequisites - None
 - Curry-Howard
+  * Status - started (sadly we only did the pre-requisites, but next time we will finish off dep types quickly then see the correspondence and explore how it is useful with a Lean example)
   * Speaker - Sam
   * Worksheets - yes from types
   * Prerequisites - Dependent types
