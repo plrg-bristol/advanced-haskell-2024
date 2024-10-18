@@ -75,6 +75,7 @@ Advanced Haskell:
 
 More Advanced Haskell:
 - Effects
+  * status - sort of started
   * Speaker - Sam
   * Worksheets - sort of
   * Prerequisites - More monads / DSLs
@@ -90,7 +91,7 @@ More Advanced Haskell:
 - Lenses
   * Speaker - Sam
   * Worksheets? - No
-  * Prerequisites - Parsers or Generators
+  * Prerequisites - none
 - Monad Transformers
   * Speaker - Jess
   * Worksheets? - No
