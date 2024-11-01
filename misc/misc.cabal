@@ -45,7 +45,7 @@ maintainer:
 -- copyright:
 -- category:
 
--- Extra files to be distributed with the package, such as examples or a README.
+-- E\xtra files to be distributed with the package, such as examples or a README.
 extra-source-files: README.md
 
 library
@@ -54,7 +54,8 @@ library
                       GADTs,
                       MoreMonads,
                       MultiParamTypeClassesAmbig,
-                      CPU
+                      CPU,
+                      Parser
 
     -- Modules included in this library but not exported.
     -- other-modules:
