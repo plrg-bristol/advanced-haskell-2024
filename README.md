@@ -28,6 +28,7 @@ Advanced Haskell:
   * Worksheets? - No
   * Prerequisites - None
 - Parsers
+  * STATUS - (One session with Jess in Parser.hs, didn't get far)
   * Speaker - Sam
   * Worksheets? - Yes
   * Prerequisites - None
