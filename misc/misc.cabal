@@ -51,11 +51,12 @@ extra-source-files: README.md
 library
     -- Modules exported by the library.
     exposed-modules:  Arrows,
-                      GADTs,
+                      -- GADTs,
                       MoreMonads,
                       MultiParamTypeClassesAmbig,
                       CPU,
-                      Parser
+                      Parser,
+                      Effects
 
     -- Modules included in this library but not exported.
     -- other-modules:

@@ -75,6 +75,7 @@ Advanced Haskell:
 
 More Advanced Haskell:
 - Effects
+  * status - sort of started
   * Speaker - Sam
   * Worksheets - sort of
   * Prerequisites - More monads / DSLs
@@ -90,16 +91,18 @@ More Advanced Haskell:
 - Lenses
   * Speaker - Sam
   * Worksheets? - No
-  * Prerequisites - Parsers or Generators
+  * Prerequisites - none
 - Monad Transformers
   * Speaker - Jess
   * Worksheets? - No
   * Prerequisites - More Monads
 - "Dependent types"
+  * status = sort of covered en passant in Curry-Howard
   * Speaker - Jess
   * Worksheets? - No
   * Prerequisites - None
 - Curry-Howard
+  * Status - started (sadly we only did the pre-requisites, but next time we will finish off dep types quickly then see the correspondence and explore how it is useful with a Lean example)
   * Speaker - Sam
   * Worksheets - yes from types
   * Prerequisites - Dependent types
