@@ -1,8 +1,11 @@
 {-# LANGUAGE GADTs #-}
 {-# LANGUAGE DeriveFunctor #-}
 {-# LANGUAGE StandaloneDeriving #-}
+{-# LANGUAGE InstanceSigs #-}
 
 module Effects where
+
+import Control.Monad
 
 -- effects
 -- * exceptions - normal exceptions blow up, exceptions expressed as handlers can potentially resume
@@ -31,9 +34,11 @@ newtype Identity a = Identity a
 -- precursor of Alg effects
 
 -- GADT
-data Free f a where
+data Free f anything where
   Pure :: a -> Free f a
-  Impure :: f a -> (a -> Free f b) -> Free f b
+  -- Bind :: Free f a -> (a -> Free f b) -> Free f b
+  Bind :: f a -> (a -> Free f b) -> Free f b
+  -- Impure :: f a -> Free f a
 
 -- ~
 -- data Free f a
@@ -49,9 +54,26 @@ data L a where
 
 type Listy = Free L
 
--- instance Applicative Listy where
---   pure = return
---   (<*>) = ap
+instance Applicative (Free f) where
+  -- a -> Free f a
+  pure = Pure
+  (<*>) = undefined -- ap
 
--- instance FMonad Listy where
+instance Functor f => Monad (Free f) where
+  -- (>>=) :: Free f a -> (a -> Free f b) -> Free f b
+  (Pure x) >>= g = g x
+  -- (Bind fa k) >>= g = fmap k fa
+  (Bind fa k) >>= g = Bind fa (k >=> g)
+
+handle :: Listy a -> [a]
+handle = interp
+  where
+    interp :: Listy a -> [a]
+    -- interp :: Free L a -> [a]
+    interp (Pure x) = [x]
+    -- interp (Pure x) = pure x
+    interp (Bind la cont) = interpL la >>= (interp . cont)
+
+    interpL :: L a -> [a]
+    interpL = undefined
 
