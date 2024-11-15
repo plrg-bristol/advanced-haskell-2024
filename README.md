@@ -76,7 +76,7 @@ Advanced Haskell:
 
 More Advanced Haskell:
 - Effects
-  * status - sort of started
+  * status - e sessions
   * Speaker - Sam
   * Worksheets - sort of
   * Prerequisites - More monads / DSLs
